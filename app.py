@@ -39,6 +39,35 @@ st.markdown("""
 
 # Step -1: Ask for user ID
 if st.session_state.step == -1:
+    st.markdown("""
+    ### 📝 Instructions
+
+    1. **Enter a User ID**  
+    Use any ID you like — preferably your initials followed by a random number (e.g., `AB42`).  
+    Click **Start** to begin. *(If it doesn’t respond the first time, try clicking Start again.)*
+
+    2. **Estimate the Age**  
+    Each page starts with a large photo at the top.  
+    Use the **slider** below the photo to estimate the person’s age.
+
+    3. **Compare Photo Pairs**  
+    Below the main photo, you’ll see a set of **photo pairs**:  
+    - **Left = Image I**, **Right = Image J**  
+    - Use the **radio button** below each pair to select **who looks older**.
+
+    4. **Click "Next" to Continue**  
+    After making your selections, click **Next** to go to the next set of images.  
+    *(If the page doesn't scroll up automatically, please scroll to the top manually.)*
+
+    5. **Finish & Download Your Results**  
+    Once you're done, a download button will appear.  
+    Click it to save your results as a `.csv` file.
+
+    6. **Send Me the CSV File**  
+    Email or message me the downloaded CSV file.  
+    **Thank you for your help! 😊**
+    """)
+    
     st.subheader("Enter Your User ID")
     with st.form("user_id_form"):
         user_id = st.text_input("User ID:")
